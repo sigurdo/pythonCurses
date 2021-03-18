@@ -140,6 +140,8 @@ def myVim(screen):
             else:
                 screen.addstr(chr(key))
 
+# Konklusjon etter mousestesten:
+# Terminal-emulatorer støtter det her skikkelig dårlig så jeg synes ikke det er noen vits i å gå videre med det her
 def mouseTest(screen):
     screen.clear()
     availmask, oldmask = curses.mousemask(curses.ALL_MOUSE_EVENTS)
@@ -157,4 +159,4 @@ def mouseTest(screen):
             screen.addstr("ting:" + chr(ch))
 
 os.environ.setdefault("ESCDELAY", "25")
-curses.wrapper(mouseTest)
+curses.wrapper(myVim)
